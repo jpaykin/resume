@@ -1,0 +1,445 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+%\usepackage{fullpage}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\miditem}[1]{\item \parbox{6.5in}{\footnotesize #1}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r} 
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-2pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+\newcommand{\myheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\LARGE Jennife Paykin}	    &  \\
+        Levine 513, 3330 Walnut St          & jpaykin@seas.upenn.edu \\
+        Philadelphia, PA 19143              & 
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+\myheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+        \ressubheading{University of Pennsylvania}{Philadelphia, PA}
+            {Ph.D. Student, Computer and Information Science}
+            {2012 -- present}
+    \vspace{7pt}
+
+        \ressubheading{University of Pennsylvania}{Philadelphia, PA}
+            {M.A., Computer and Information Science}
+            {2015}
+
+
+    \vspace{7pt}
+	%\item 
+        \ressubheading{Wesleyan University}{Middletown, CT}
+            {B.A. Mathematics and Computer Science (with high honors)}
+            {2012}
+%	{ \footnotesize \begin{itemize}
+%            \resitem{GPA 3.90}
+%            \resitem{Senior Prize in Computer Science;
+%                Phi Beta Kappa;
+%                Dean's List Fall 2010, Spring 2011 and Fall 2011}
+%	\end{itemize}	} 
+%	\end{itemize} % End Education list
+
+    \vspace{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+% \resheading{Research Experience}
+%         \ressubheading{Wesleyan University Department of Computer Science}{Middletown, CT}{Honors Thesis}{September 2011 -- May 2012}
+%         { \footnotesize \begin{itemize}
+%             \resitem{Research Advisor: Norman Danner}
+%             \resitem{Constructed a static time-complexity analysis for a 
+%                 higher-order language with structural recursion}
+%             \resitem{Formalized the analysis in Coq (a dependently-typed
+%                 proof assistant) to obtain machine certification of
+%                 the system}
+%         \end{itemize}   }
+
+%     \vspace{5pt}
+        
+%         \ressubheading{Algorithmic Combinatorics on Partial Words REU Program}{Greensboro, NC}{Research Assistant}{June 2011 -- July 2011}
+%         { \footnotesize \begin{itemize}
+%             \resitem{Research Advisor: Francine Blanchet-Sadri}
+%             \resitem{Worked with a partner to study properties of
+%                 the abelian complexity function on partial words}
+%             \resitem{Developed tools in Python and Java to graph
+%                 abelian complexity on a class on infinite words}
+%         \end{itemize}   }
+
+%     \vspace{5pt}
+% %        \ressubheading{Wesleayn University Department of Computer Science}{Middletown, CT}{Individual Tutorial}{Spring 2011}
+% %        { \footnotesize \begin{itemize}
+% %            \resitem{Research Advisor: Norman Danner}
+% %            \resitem{Studied Coq, a proof assistant, and proved
+% %            theorems assisting in the asymptotic time-complexity 
+% %            analysis of certain functions (for example: the master theorem)}
+% %        \end{itemize}   }
+
+%         \ressubheading{Washington University Computer Science REU Program}{St. Louis, MO}{Research Assistant}{June 2010 -- August 2010}
+%         { \footnotesize \begin{itemize}
+%             \resitem{Research Advisors: Kunal Agrawal and Roger Chamberlain}
+%             \resitem{Implemented a parallel regression tree designed for web-search ranking applications using the C MPI libraries}
+%             \resitem{Expanded libraries for the X language, an implementation of the Auto-Pipe system for streaming applications}
+%             \resitem{Incorporated Cilk++ blocks into the existing X language to enable thread-based parallelism within blocks}
+%         \end{itemize}   }
+
+%     \vspace{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+    \begin{itemize}
+
+    \item{Jennifer Paykin, Robert Rand, and Steve Zdancewic. 
+        \emph{Qwire: A core quantum circuit language.}
+        To appear at the 44th ACM SIGPLAN Symposium
+        on Principles of Programming Languages (POPL), January 2017.
+        }
+
+      \item{Jennifer Paykin, Antal Spector-Zabusky, and Kenneth Foner.
+          \emph{\texttt{choose} your own derivative (Extended Abstract).}
+          Proceedings of the 1st Workshop on Type-Driven Development (TyDe
+          2016), Nara, Japan, September 2016.
+        }
+
+        \item{Jennifer Paykin and Steve Zdancewic.
+        \emph{A linear/producer/consumer model of classical linear logic.}
+        To appear in a special issue of Mathematical Structures in Computer
+        Science (MSCS) on LINEARITY.
+        }
+
+        \item{Jennifer Paykin and Steve Zdancewic.
+        \emph{Linear-$\lambda\mu$ is CP (more or less).}
+        A List of Successes to Change the World, 
+        Edinburgh, UK, April 2016.
+        }
+
+        \item{Jennifer Paykin and Steve Zdancewic.
+        \emph{A linear/producer/consumer model of classical linear logic.}
+        Proceedings of the Third International Workshop on LINEARITY,
+        Vienna, Austria, July 2014.
+        }
+
+        \item{Norman Danner, Jennifer Paykin and James S Royer.
+         \emph{A static cost semantics for a higher-order
+         language.} Proceedings of the 7th ACM SIGPLAN workshop on Programming
+         Languages meets Program Verification (PLPV), Rome, Italy, January 2013.}
+        
+        \item{Stephen Tyree, Killian Q. Weinberger, Kunal Agrawal, 
+         and Jennifer Paykin. \emph{Parallel boosted regression trees 
+         for web search ranking.} Proceedings of the 20th International
+         conference on World Wide Web, ACM, New York, USA, 2011.}
+
+%        \item{Stephen Tyree, Jennifer Paykin, Killian Q. Weinberger,     
+%        and Kunal Agrawal. \emph{Parallel gradient boosted regression
+%        trees.} Poster at Learning on Cores, Clusters, and 
+%        Clouds Workshop, NIPS 2010, December 2010.}
+
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Invited Talks}
+    \begin{itemize}
+
+    \item{\emph{Qwire: A Core Language for Quantum Circuits.}
+        University of Maryland, College Park, MD, October 7, 2016.}
+
+
+    \item{\emph{Logic, Categories, and Graphical User Interfaces.}
+        Wesleyan University, Middletown, CT, April 21, 2015.}
+
+
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Honors and Awards}
+    \begin{itemize}
+        \resitem{ACM Student Research Competition at ICFP 2016, Second Place, Graduate
+          Category.}
+        \resitem{ACM Student Research Competition at ICFP 2015, First Place, Graduate
+          Category.}
+        \resitem{NSF Graduate Research Fellowship, 2013}
+        \resitem{Senior Prize in Computer Science, Wesleyan University, 2012}
+%        \resitem{Best Poster in Mathematics and Computer Science at 
+%            the Wesleyan University Natural Sciences and Mathematics
+%            Poster Session}
+        \resitem{Phi Beta Kappa Inductee, 2012}
+%        \resitem{Wesleyan University Dean's List, Fall 2010--Spring 2012}
+    \end{itemize}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Posters and Presentations}
+%     \begin{itemize}
+%         \item {``Linear Logic as Linear Algebra''}
+%         \vspace{-2mm}
+%         \begin{itemize}
+%             \resitem{Poster, CRA-W Grad Cohort Workshop, April 5, 2013}
+%         \end{itemize}
+%         \item{``Automated cost analysis of a higher-order language in Coq''}
+%         \vspace{-2mm}
+%         \begin{itemize}  
+%             \resitem{Wesleyan University Computer Science Seminar, 
+%                 April 24, 2012}
+%             \resitem{Poster, Consortium for Computing
+%                 Sciences in Colleges Northeastern Region, April 27, 2012}
+%             \resitem{Poster, Wesleyan University Natural
+%                 Sciences and Mathematics Poster Session, April 19, 2012}
+%                 \begin{itemize}
+%                     \resitem{Best Poster in Mathematics and Computer Science}
+%                 \end{itemize}
+%         \end{itemize}
+%         \item{``Abelian complexity and variations on the Thue-Morse word''} 
+%         \vspace{-3mm}
+%         \begin{itemize} 
+%         \resitem{Mid-Hudson Mathematics Conference for Undergraduates,
+%             October 16, 2011}
+%         \end{itemize}
+%     \end{itemize}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+\begin{itemize}
+    \item{CIS 191, Linux and Unix Skills (Instructor),
+        University of Pennsylvania, Fall 2016.}
+
+
+    \item{CIS 502, Analysis of Algorithms (Teaching Assistant),
+        University of Pennsylvania, Summer 2015.}
+
+    \item{CIS 160, Mathematical Foundations of Computer Science (Teaching
+        Assistant),
+        University of Pennsylvania, Spring 2014.}
+
+    \item{CIS 500, Software Foundations (Teaching Assistant),
+        University of Pennsylvania, Fall 2013.}
+
+    \item{MATH 228, Discrete Mathematics (Teaching Assistant),
+        Wesleyan University, Spring 2010.}
+
+        
+    % \ressubheading{Wesleyan University Department of Mathematics}{Middletown, CT}{Math Workshop Tutor}{September 2011 -- June 2012}
+    % { \footnotesize \begin{itemize}
+    %     \resitem{Provided reference and homework help for students in a wide variety of lower level math courses}
+    % \end{itemize}   }
+
+	% \ressubheading{Indian Hills High School}{Oakland, NJ}{Tutoring Chairperson}{September 2007 -- June 2008}
+	% {\footnotesize \begin{itemize}
+	%     \resitem{Founded student tutoring program though the National Honors Society}
+    %     \resitem{Organized tutors and assisted students with schoolwork in one-on-one sessions}
+	% \end{itemize}	} 
+
+\end{itemize}
+\vspace{7pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Service and Professional Activities}
+\begin{itemize}
+
+\item{Instructor of a Computer Science workshop at the GEMS program (Girls in
+    Engineering, Math, and Science) at the University of Pennsylvania, summers
+    2014-2016.}
+
+
+    \item{Organizer of CISTErs, a group for PhD, postdoc, and faculty
+        women in engineering at the University of Pennsylvania, 2015--2016.}
+
+    \item{Lead a reading group on category theory during the spring and summer
+        of 2015.}
+\end{itemize}
+%    \item{Volunteered with the FIRST Lego League championships}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Skills}
+%    \begin{itemize}
+%        \resitem{Coq, Haskell, OCaml, Java, Python, C++ \LaTeX}
+%	\item[Programming Languages:] {\footnotesize Coq, Haskell, Java, Python, Cilk++, \LaTeX}
+%	\item[Operating Systems:] {\footnotesize Linux, Windows, Mac OS}
+%        \item[Languages:] {\footnotesize Elementary Russian and French}
+    
+%        \item[Projects:] 
+
+%            \parbox{6.2in}{
+ %           {\footnotesize \begin{itemize}
+  %              \item Implemented and analyzed the efficiency of a prime number generating algorithm developed by a classmate
+   %             \item Wrote scripts to process genome data of vertebrate mitochondria in order to analyze a phylogeny program
+%                \item Provided continuing support for three computers running Ubuntu and Windows XP
+    %            \item Designed and maintained the web site of a high school youth group
+     %        \end{itemize} }
+ %          } 
+%            \renewcommand{\labelitemi}{$\bullet$}
+
+%    \end{itemize} % End Skills list
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+%\resheading{Related Projects and Experiences}
+%    {\footnotesize \begin{itemize}
+%        \item Administered two Debian servers used by the Wesleyan University Computer Science department
+%        \item Implemented and analyzed the efficiency of a prime number generating algorithm developed by a classmate
+%        \item Wrote scripts to process genome data in order to analyze a phylogeny program
+%    \end{itemize}   }
+
+
+
+%        \item
+%        \ressubheading{Wesleyan University Department of Computer Science}{Middletown, CT}{System Administrator}{September 2010 -- present}
+%        { \footnotesize \begin{itemize}
+%            \resitem{Administered two Debian servers used by the CS department, including upgrading and securing the systems}
+%        \end{itemize}   }
+
+%	\item
+%	\ressubheading{Wesleyan University Center for the Arts}{Middletown, CT}{House Manager}{September 2009 -- Present}
+%	{ \footnotesize	\begin{itemize}
+%	    \resitem{Coordinated with artists and house staff during performances; supervised up to five ushers}
+%	    \resitem{Sold refreshments and artists' merchandise}
+%	\end{itemize}	}
+
+%	\item
+%	\ressubheading{Wesleyan University Center for the Arts}{Middletown, CT}{Usher}{October 2008 -- Present}
+%	{ \footnotesize	\begin{itemize}
+%	    \resitem{Directed patrons through theater before, during, and after a performance}
+%	    \resitem{Sold refreshments and artists' merchandise}
+%	\end{itemize}	}
+
+%	\item 
+%	\ressubheading{Wesleyan University Olin Library}{Middletown, CT}{Reserve Desk Worker}{September 2008 -- Present}
+%	{ \footnotesize	\begin{itemize}
+ %          \resitem{Retrieved books for patrons and processed returns and fees}
+%	    \resitem{Helped patrons to find books placed on reserve}
+%	    \resitem{Processed returns and fees on library books}
+%	    \resitem{Logged locations of books and filed paperwork for reserve office}
+%	\end{itemize}	}
+
+%	\item
+%	\ressubheading{Oakland Public Library}{Oakland, NJ}{Page}{August 2007 -- June 2008}
+%	{ \footnotesize	\begin{itemize}
+%	    \resitem{Shelved books and assisted with organization of children's library}
+%	    \resitem{Assisted with technological aspects of public programs at the library}
+%	\end{itemize}	}
+
+%	\item
+%	\ressubheading{Barnert Temple Religious School}{Franklin Lakes, NJ}{Teacher's Assistant}{January 2005 -- June 2008}
+%	{ \footnotesize	\begin{itemize}
+%	    \resitem{Worked with teacher taking attendance and correcting behavior of fifth grade students}
+%	    \resitem{Taught classes from pre-written lesson plans}
+%	\end{itemize}	}
+
+
+%	\end{itemize}  % End Experience list
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Activities}
+ %   \begin{itemize}
+
+  %      \item
+%	\ressubheading{Wesleyan University}{Middletown, CT}{Blood Drive Co-Coordinator}{September 2009 -- Present}
+%	{\footnotesize	\begin{itemize}
+%	    \resitem{Coordinated bi-annual drives with the Red Cross, university staff, and student volunteers}
+%	    \resitem{Publicized for drives on multiple mediums}
+%	    \resitem{Oversaw volunteers, reservations, and a check-in table at events}
+%	\end{itemize}	}
+
+%        \item
+%	\item \textbf{Fencing Club Captain and Co-Founder} {\footnotesize Wesleyan University September 2008 -- Present\\
+%                    Co-founded informal club and lead weekly practices}
+%	\ressubheading{Wesleyan University Fencing Club}{Middletown, CT}{Captain and Co-Founder}{September 2008 -- Present}
+%	{\footnotesize \begin{itemize}
+%	    \resitem{Co-founded informal club and assisted with leading weakly practices}
+%	    \resitem{Helped acquire equipment for use by the club}
+%	    \resitem{Took over as sole captain in fall 2009}
+%	\end{itemize}	}
+
+ %       \item
+%	\ressubheading{Indian Hills High School National Honors Society}{Oakland, NJ}{Tutoring Chairperson}{
+%			September 2007 -- June 2008}
+%	{\footnotesize \begin{itemize}
+%	    \resitem{Co-founded a student tutoring program}
+%	    \resitem{Matched tutors with students for one-on-one assistance throughout the school year}
+%	\end{itemize}	} 
+
+ %   \end{itemize} % End Extra-Curricular Activities
+
+\end{document}
+
+
+
+
+%Only Print References If Requested!  Maybe even put it in it's own page.  Must have same heading as first page.
+%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\myheader
+\resheading{References}
+	\begin{center}
+		\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}  l l l }
+			Toby Rummans & Eric Karl & Gordon Smith \\
+			Entry Level Web Developer & Computer Science \& Engineering  & Technology Support Specialist \\ 
+			\vspace{10pt} 
+			Memolinkcorp & BYU-Idaho & BYU-Idaho \\ 
+			3700 E Jewell Ave \# 225 & 525 South Center St. & 525 South Center St.  \\
+			Denver, CO 80210 & Rexburg ID 83460 & Rexburg ID 83460 \\
+			(303) 349-3469 & (208) 496-3097 & (208) 496-2816 \\
+		\end{tabular*}
+	\end{center}
+	
+% \end{document}
+
+
+Source: http://www.squawkfox.com/2009/03/08/6-action-words-that-make-your-resume-rock/
